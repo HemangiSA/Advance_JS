@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Events</title>
+<script>
+	function display()
+	{
+	document.getElementById("showdate").innerHTML=Date();
+	}
+	function change()
+	{
+	document.getElementById("lbl").innerHTML=("The selected value is:"+formid.slt[formid.slt.selectedIndex].text)
+	}
+	function setNew()
+	{
+	document.getElementById("img1").src="butter1.jpg";
+	}
+	function setOld()
+	{
+	document.getElementById("img1").src="bulb.png";
+	}
+</script>
+</head>
+	<center>
+	<h1>Events</h1>
+	<hr>
+	<form name="formid">
+		<select name="slt" onchange="change()">
+			<option>Select Subject</option>
+			<option value="HTML">HTML</option>
+			<option value="CSS">CSS</option>
+			<option value="JavaScript">JavaScript</option>
+			<option value="Bootstrap">Bootstrap</option>
+		</select>
+	</form>
+	<br>
+	<label id="lbl"></label>
+	<br>
+	<br>
+	<br>
+	<center>
+	<button type="button" onclick="display()">Show Date</button>
+	<p id="showdate"></p>
+	</center>
+	<br>
+	<br>
+	<center>
+	<img id="img1" onmouseover="setNew()" onmouseout="setOld()" src="bulb.png" width="200"/>
+	</center>
+</body>
+</html>
